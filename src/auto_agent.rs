@@ -1,6 +1,6 @@
 use libc;
 use std::os::raw;
-use auto::*;
+use crate::auto::*;
 
 pub type marker_t = *mut raw::c_void;
 pub type const_marker_t = *const raw::c_void;
@@ -25,7 +25,7 @@ impl <T> ::std::clone::Clone for __BindgenUnionField<T> {
 }
 impl <T> ::std::marker::Copy for __BindgenUnionField<T> { }
 impl <T> ::std::fmt::Debug for __BindgenUnionField<T> {
-    fn fmt(&self, fmt: &mut ::std::fmt::Formatter) -> ::std::fmt::Result {
+    fn fmt(&self, fmt: &mut ::std::fmt::Formatter<'_>) -> ::std::fmt::Result {
         fmt.write_str("__BindgenUnionField")
     }
 }

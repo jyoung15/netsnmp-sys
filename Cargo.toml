@@ -9,6 +9,7 @@ documentation = "https://hroi.github.com/netsnmp_sys/"
 links = "netsnmp"
 build = "build.rs"
 license = "BSD-2-Clause"
+edition = "2018"
 
 [dependencies]
 libc = "0.2.*"
