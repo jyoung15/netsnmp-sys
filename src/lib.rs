@@ -34,9 +34,9 @@ pub const SNMP_MSG_INFORM: raw::c_int = 166;
 pub const SNMP_MSG_TRAP2: raw::c_int = 167;
 pub const SNMP_MSG_REPORT: raw::c_int = 168;
 
-pub const SNMP_NOSUCHOBJECT: raw::c_uchar = (ASN_CONTEXT | ASN_PRIMITIVE | 0x0);
-pub const SNMP_NOSUCHINSTANCE: raw::c_uchar = (ASN_CONTEXT | ASN_PRIMITIVE | 0x1);
-pub const SNMP_ENDOFMIBVIEW: raw::c_uchar = (ASN_CONTEXT | ASN_PRIMITIVE | 0x2);
+pub const SNMP_NOSUCHOBJECT: raw::c_uchar = ASN_CONTEXT | ASN_PRIMITIVE | 0x0;
+pub const SNMP_NOSUCHINSTANCE: raw::c_uchar = ASN_CONTEXT | ASN_PRIMITIVE | 0x1;
+pub const SNMP_ENDOFMIBVIEW: raw::c_uchar = ASN_CONTEXT | ASN_PRIMITIVE | 0x2;
 
 pub const SNMP_ERR_NOERROR: raw::c_long = 0;
 pub const SNMP_ERR_TOOBIG: raw::c_long = 1;
@@ -145,19 +145,19 @@ pub const ASN_PRIVATE: raw::c_uchar = 0xC0;
 pub const ASN_PRIMITIVE: raw::c_uchar = 0x00;
 pub const ASN_CONSTRUCTOR: raw::c_uchar = 0x20;
 
-pub const ASN_IPADDRESS: raw::c_uchar = (ASN_APPLICATION | 0);
-pub const ASN_COUNTER: raw::c_uchar = (ASN_APPLICATION | 1);
-pub const ASN_GAUGE: raw::c_uchar = (ASN_APPLICATION | 2);
-pub const ASN_UNSIGNED: raw::c_uchar = (ASN_APPLICATION | 2); // RFC 1902 - same as GAUGE
-pub const ASN_TIMETICKS: raw::c_uchar = (ASN_APPLICATION | 3);
-pub const ASN_OPAQUE: raw::c_uchar = (ASN_APPLICATION | 4); // changed so no conflict with other includes
-pub const ASN_NSAP: raw::c_uchar = (ASN_APPLICATION | 5); // historic - don't use
-pub const ASN_COUNTER64: raw::c_uchar = (ASN_APPLICATION | 6);
-pub const ASN_UINTEGER: raw::c_uchar = (ASN_APPLICATION | 7); // historic - don't use
-pub const ASN_FLOAT: raw::c_uchar = (ASN_APPLICATION | 8);
-pub const ASN_DOUBLE: raw::c_uchar = (ASN_APPLICATION | 9);
-pub const ASN_INTEGER64: raw::c_uchar = (ASN_APPLICATION | 10);
-pub const ASN_UNSIGNED64: raw::c_uchar = (ASN_APPLICATION | 11);
+pub const ASN_IPADDRESS: raw::c_uchar = ASN_APPLICATION | 0;
+pub const ASN_COUNTER: raw::c_uchar = ASN_APPLICATION | 1;
+pub const ASN_GAUGE: raw::c_uchar = ASN_APPLICATION | 2;
+pub const ASN_UNSIGNED: raw::c_uchar = ASN_APPLICATION | 2; // RFC 1902 - same as GAUGE
+pub const ASN_TIMETICKS: raw::c_uchar = ASN_APPLICATION | 3;
+pub const ASN_OPAQUE: raw::c_uchar = ASN_APPLICATION | 4; // changed so no conflict with other includes
+pub const ASN_NSAP: raw::c_uchar = ASN_APPLICATION | 5; // historic - don't use
+pub const ASN_COUNTER64: raw::c_uchar = ASN_APPLICATION | 6;
+pub const ASN_UINTEGER: raw::c_uchar = ASN_APPLICATION | 7; // historic - don't use
+pub const ASN_FLOAT: raw::c_uchar = ASN_APPLICATION | 8;
+pub const ASN_DOUBLE: raw::c_uchar = ASN_APPLICATION | 9;
+pub const ASN_INTEGER64: raw::c_uchar = ASN_APPLICATION | 10;
+pub const ASN_UNSIGNED64: raw::c_uchar = ASN_APPLICATION | 11;
 
 #[cfg(target_pointer_width = "64")]
 pub const USM_AUTH_KU_LEN: usize = 64;
