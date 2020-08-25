@@ -159,6 +159,7 @@ pub const ASN_DOUBLE: raw::c_uchar = ASN_APPLICATION | 9;
 pub const ASN_INTEGER64: raw::c_uchar = ASN_APPLICATION | 10;
 pub const ASN_UNSIGNED64: raw::c_uchar = ASN_APPLICATION | 11;
 
+// NOTE: if using net-snmp v5.7.3 or older both USM_AUTH_KU_LEN and USM_PRIV_KU_LEN should be 32 regardless of OS architecture
 #[cfg(target_pointer_width = "64")]
 pub const USM_AUTH_KU_LEN: usize = 64;
 #[cfg(target_pointer_width = "64")]
