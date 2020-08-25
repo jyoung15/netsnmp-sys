@@ -116,6 +116,7 @@ pub struct Struct_snmp_pdu {
     pub securityModel: raw::c_int,
     pub securityLevel: raw::c_int,
     pub msgParseModel: raw::c_int,
+    // NOTE: comment out msgMaxSize line below if using net-snmp v5.7.3 or older
     pub msgMaxSize: raw::c_long,
     pub transport_data: *mut raw::c_void,
     pub transport_data_length: raw::c_int,
