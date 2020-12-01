@@ -324,19 +324,19 @@ pub struct Struct_snmp_session {
     pub securityAuthProto: *mut oid,
     pub securityAuthProtoLen: libc::size_t,
     // NOTE: if using net-snmp v5.7.3 or older both securityAuthKey and securityPrivKey should be 32usize regardless of OS architecture
-    #[cfg(target_pointer_width = "64")]
+    // #[cfg(target_pointer_width = "64")]
     pub securityAuthKey: [raw::c_uchar; 64usize],
-    #[cfg(target_pointer_width = "32")]
-    pub securityAuthKey: [raw::c_uchar; 32usize],
+    // #[cfg(target_pointer_width = "32")]
+    // pub securityAuthKey: [raw::c_uchar; 32usize],
     pub securityAuthKeyLen: libc::size_t,
     pub securityAuthLocalKey: *mut raw::c_uchar,
     pub securityAuthLocalKeyLen: libc::size_t,
     pub securityPrivProto: *mut oid,
     pub securityPrivProtoLen: libc::size_t,
-    #[cfg(target_pointer_width = "64")]
+    // #[cfg(target_pointer_width = "64")]
     pub securityPrivKey: [raw::c_uchar; 64usize],
-    #[cfg(target_pointer_width = "32")]
-    pub securityPrivKey: [raw::c_uchar; 32usize],
+    // #[cfg(target_pointer_width = "32")]
+    // pub securityPrivKey: [raw::c_uchar; 32usize],
     pub securityPrivKeyLen: libc::size_t,
     pub securityPrivLocalKey: *mut raw::c_uchar,
     pub securityPrivLocalKeyLen: libc::size_t,
